@@ -1,9 +1,9 @@
 resource "aws_s3_bucket" "test-s3-tf-state" {
 
-  bucket = "test-s3-bucket-tfstate"
+  bucket = "skt-user16-test-s3-bucket-tfstate"
 
   tags = {
-    "Name" = "test-s3-bucket-tfstate"
+    "Name" = "skt-user16-test-s3-bucket-tfstate"
   }
   
 }
@@ -21,7 +21,7 @@ resource "aws_dynamodb_table" "test-ddb-tf-lock" {
   }
 
   tags = {
-    "Name" = "test-s3-ddb-tflock"
+    "Name" = "skt-user16-test-s3-ddb-tflock"
   }
 
 }
