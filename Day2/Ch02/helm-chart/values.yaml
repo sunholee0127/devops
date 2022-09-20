@@ -2,10 +2,10 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
-replicaCount: 2
+replicaCount: 1
 
 image:
-  repository: <AWS ECR Repository URL>/test
+  repository: 255380800200.dkr.ecr.ap-southeast-1.amazonaws.com/skt-user16
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
@@ -46,7 +46,7 @@ ingress:
   annotations:
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
-    alb.ingress.kubernetes.io/subnets: <Subnet IDs>
+    alb.ingress.kubernetes.io/subnets: subnet-08ce1fb54065e874d, subnet-03cd146e7442340a7
   hosts:
     - host: ""
       paths:
