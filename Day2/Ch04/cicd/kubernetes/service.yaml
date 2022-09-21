@@ -10,6 +10,5 @@ spec:
     name: http
   selector:
     app: bubble-pool
-  externalTrafficPolicy: Cluster
   sessionAffinity: None
-  type: LoadBalancer
+  type: ClusterIP
