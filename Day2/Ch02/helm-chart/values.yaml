@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: 255380800200.dkr.ecr.ap-southeast-1.amazonaws.com/skt-user16
+  repository: 804678930206.dkr.ecr.ap-northeast-2.amazonaws.com/dev-baseball-ai-hl
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
@@ -25,10 +25,12 @@ serviceAccount:
 
 podAnnotations: {}
 
-podSecurityContext: {}
+podSecurityContext:
+  {}
   # fsGroup: 2000
 
-securityContext: {}
+securityContext:
+  {}
   # capabilities:
   #   drop:
   #   - ALL
@@ -46,7 +48,7 @@ ingress:
   annotations:
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
-    alb.ingress.kubernetes.io/subnets: subnet-08ce1fb54065e874d, subnet-03cd146e7442340a7
+    alb.ingress.kubernetes.io/subnets: subnet-028225ea186880268, subnet-002e7859edf6ebabe
   hosts:
     - host: ""
       paths:
@@ -57,7 +59,8 @@ ingress:
   #    hosts:
   #      - chart-example.local
 
-resources: {}
+resources:
+  {}
   # We usually recommend not to specify default resources and to leave this as a conscious
   # choice for the user. This also increases chances charts run on environments with little
   # resources, such as Minikube. If you do want to specify resources, uncomment the following
